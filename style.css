@@ -1,0 +1,160 @@
+/* 
+ * CSS untuk Website Peduli Sosial
+ * Dibuat ulang dari nol untuk kesederhanaan dan kemudahan.
+ * Tema: Warna calming biru-hijau, layout responsif, dan animasi ringan.
+ */
+
+/* 1. Reset dasar untuk menghindari perbedaan browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif; /* Font bersih dan modern */
+    background: linear-gradient(135deg, #e6f7ff 0%, #a7d8f0 100%); /* Gradient biru calming */
+    color: #333;
+    min-height: 100vh; /* Pastikan penuh layar */
+    display: flex;
+    flex-direction: column; /* Agar konten mengalir dari atas ke bawah */
+}
+
+/* 2. Header: Bagian atas dengan judul dan menu */
+header {
+    background: linear-gradient(90deg, #007bff 0%, #28a745 100%); /* Gradient biru-hijau */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek 3D */
+    border-radius: 0 0 10px 10px; /* Sudut melengkung di bawah */
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Efek bayangan teks */
+}
+
+#main-menu {
+    display: flex;
+    justify-content: center; /* Tengahkan tombol */
+    gap: 10px; /* Jarak antara tombol */
+    margin-top: 10px;
+}
+
+#main-menu button {
+    background-color: #fff; /* Latar putih */
+    color: #007bff; /* Warna teks biru */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer; /* Kursor berubah saat hover */
+    transition: all 0.3s; /* Animasi halus */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan ringan */
+}
+
+#main-menu button:hover {
+    background-color: #007bff; /* Ganti warna saat hover */
+    color: white;
+    transform: scale(1.05); /* Efek zoom */
+}
+
+/* 3. Main content: Bagian utama dengan sections */
+main {
+    flex: 1; /* Isi sisa ruang agar tidak ada kosong di bawah */
+    padding: 20px;
+    max-width: 800px; /* Batas lebar untuk desktop */
+    margin: 0 auto; /* Tengahkan */
+    overflow: auto; /* Gulir jika konten terlalu panjang */
+}
+
+section {
+    background-color: white; /* Latar putih */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Bayangan untuk card effect */
+    margin: 20px auto; /* Jarak dan tengahkan */
+    transition: opacity 0.5s ease; /* Animasi muncul */
+}
+
+.hidden {
+    display: none; /* Sembunyikan section */
+}
+
+#curhat-input, [id^="balas-input-"] { /* Untuk textarea di kirim dan balas */
+    width: 100%;
+    height: 120px;
+    padding: 15px;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    resize: vertical;
+    margin-bottom: 15px;
+    font-size: 16px;
+    background-color: #f0f8ff;
+    box-shadow: 0 2px 10px rgba(0, 123, 255, 0.1);
+    transition: all 0.3s; /* Animasi untuk focus */
+}
+
+#curhat-input:focus, [id^="balas-input-"]:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 15px rgba(40, 167, 69, 0.3);
+    background-color: #e6f7ff;
+}
+
+/* 4. Tombol umum */
+button {
+    background: linear-gradient(135deg, #007bff 0%, #28a745 100%);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 5. Item cerita */
+.curhat-item {
+    border-bottom: 1px solid #eee;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* 6. Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(90deg, #28a745 0%, #007bff 100%);
+    color: white;
+    margin-top: 20px;
+}
+
+/* 7. Responsif untuk mobile */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 22px; /* Kurangi ukuran untuk mobile */
+    }
+    
+    #main-menu {
+        flex-direction: column; /* Tombol bertumpuk */
+        gap: 5px;
+    }
+    
+    section h2 {
+        font-size: 20px;
+    }
+    
+    #curhat-input, [id^="balas-input-"] {
+        height: 100px; /* Lebih pendek untuk mobile */
+    }
+}
