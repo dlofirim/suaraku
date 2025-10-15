@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Peduli Sosial - Curhat dan Balas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Untuk ikon -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Peduli Sosial: Tempat Curhat dan Dukungan</h1>
+        <nav id="main-menu">
+            <button id="btn-kirim">Kirim Cerita <i class="fas fa-pen"></i></button>
+            <button id="btn-balas">Membalas Cerita <i class="fas fa-reply"></i></button>
+            <button id="btn-lihat">Lihat Daftar Cerita <i class="fas fa-list"></i></button>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Section untuk Kirim Cerita -->
+        <section id="section-kirim" class="hidden">
+            <h2>Kirim Cerita Anda</h2>
+            <textarea id="curhat-input" placeholder="Tulis cerita Anda di sini..."></textarea>
+            <button id="submit-btn">Kirim Cerita</button>
+            <p id="error-message" style="color: red;"></p>
+        </section>
+        
+        <!-- Section untuk Membalas Cerita -->
+        <section id="section-balas" class="hidden">
+            <h2>Membalas Cerita</h2>
+            <div id="balas-container"></div> <!-- Ini akan menampilkan daftar cerita dengan form balasan -->
+            <button id="back-to-menu">Kembali ke Menu Utama</button>
+        </section>
+        
+        <!-- Section untuk Lihat Daftar Cerita -->
+        <section id="section-lihat" class="hidden">
+            <h2>Daftar Cerita</h2>
+            <div id="curhat-container"></div>
+            <button id="back-to-menu-lihat">Kembali ke Menu Utama</button>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Website Peduli Sosial. Dibuat dengan ❤️ oleh Ahli Pembuat Website.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
