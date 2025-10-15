@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ceritakan masalah mu, tidak perlu nama, tidak perlu takut. Cukup jujur apa adanya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>ceritakan masalah mu, tidak perlu nama, tidak perlu takut. Cukup jujur apa adanya</h1>
+        <nav id="main-menu">
+            <button id="btn-kirim">Kirim Cerita <i class="fas fa-pen"></i></button>
+            <button id="btn-balas">Balas Cerita <i class="fas fa-reply"></i></button>
+            <button id="btn-lihat-balasan">Lihat Balasan Cerita <i class="fas fa-eye"></i></button>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Section untuk Kirim Cerita -->
+        <section id="section-kirim" class="hidden">
+            <h2>Kirim Cerita Anda</h2>
+            <textarea id="curhat-input" placeholder="Tulis cerita Anda di sini..."></textarea>
+            <button id="submit-btn">Kirim Cerita</button>
+            <p id="error-message" style="color: red;"></p>
+        </section>
+        
+        <!-- Section untuk Balas Cerita -->
+        <section id="section-balas" class="hidden">
+            <h2>Balas Cerita</h2>
+            <div id="balas-container"></div>
+            <button id="back-to-menu">Kembali ke Menu Utama</button>
+        </section>
+        
+        <!-- Section untuk Lihat Balasan Cerita -->
+        <section id="section-lihat-balasan" class="hidden">
+            <h2>Lihat Balasan Cerita</h2>
+            <div id="lihat-balasan-container"></div>
+            <button id="back-to-menu-lihat-balasan">Kembali ke Menu Utama</button>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; “Satu kalimat dukungan bisa menyelamatkan hari seseorang.”</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
